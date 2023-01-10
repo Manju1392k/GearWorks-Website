@@ -1,0 +1,2 @@
+
+Inserting some dummy data into this files. This file is used as a database in this project. But this is not a good way to store the data. But I'm keeping it simple for this project. In the future, I'll connect to MongoDB and save the data there. 

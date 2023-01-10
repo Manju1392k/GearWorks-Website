@@ -1,0 +1,32 @@
+{
+  "bikeblogs": [
+    {
+      "id": "1",
+      "BlogsAddedTime": "1 Jan 2023 8:30pm",
+      "BlogsAddedby": "Manjunath",
+      "BlogsImage": "https://wallpaperaccess.com/full/3209654.jpg",
+      "BlogsText": "A bicycle ride is proof that one doesn’t really need much support as long as you keep moving."
+    },
+    {
+      "id": "2",
+      "BlogsAddedTime": "2 Jan 2023 8:30pm",
+      "BlogsAddedby": "GearWorks",
+      "BlogsImage": "https://wallpaperaccess.com/full/8225.jpg",
+      "BlogsText": "Do I ride my bike to add days to my life? Maybe, but not really. I actually do it to add life to my days!"
+    },
+    {
+      "id": "3",
+      "BlogsAddedTime": "10 Jan 2023 8:30pm",
+      "BlogsAddedby": "Coder",
+      "BlogsImage": "https://wallpaperaccess.com/full/3209626.jpg",
+      "BlogsText": "Some people call it adventure, but I call it life.!"
+    },
+    {
+      "id": "4",
+      "BlogsAddedTime": "15 Jan 2023 8:30pm",
+      "BlogsAddedby": "Biker",
+      "BlogsImage": "https://wallpaperaccess.com/full/3209556.jpg",
+      "BlogsText": "Yesterday, today, tomorrow—every day is a ride!"
+    }
+  ]
+}

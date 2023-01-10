@@ -1,0 +1,36 @@
+{
+  "bikes": [
+    {
+      "id": "1",
+      "bikeImage": "https://wallpaperaccess.com/full/3209626.jpg",
+      "bikeName": "GearWorks C12 Pro Bike",
+      "bikePrice": "30,0000",
+      "bikeEngine": "1200cc",
+      "bikeTopSpeed": "200"
+    },
+    {
+      "id": "2",
+      "bikeImage": "https://wallpaperaccess.com/full/3209654.jpg",
+      "bikeName": "GearWorks showpro",
+      "bikePrice": "20,0000",
+      "bikeEngine": "900cc",
+      "bikeTopSpeed": "150"
+    },
+    {
+      "id": "3",
+      "bikeImage": "https://wallpaperaccess.com/full/8225.jpg",
+      "bikeName": "GearWorks Bik Sports",
+      "bikePrice": "21,9990",
+      "bikeEngine": "920cc",
+      "bikeTopSpeed": "120"
+    },
+    {
+      "id": "4",
+      "bikeImage": "https://wallpaperaccess.com/full/3209556.jpg",
+      "bikeName": "GearWorks Raz road",
+      "bikePrice": "10,9990",
+      "bikeEngine": "625cc",
+      "bikeTopSpeed": "110"
+    }
+  ]
+}

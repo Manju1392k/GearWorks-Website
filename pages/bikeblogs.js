@@ -1,10 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
 
-// Image importing
-import BrannerImage from "../public/BrannerImage.png";
-
-export default function BikeBlogs() {
+export default function BikeBlogs({ data }) {
   return (
     <>
       <Head>
@@ -21,31 +18,24 @@ export default function BikeBlogs() {
         <main className="blackbox w-[90vw] mx-auto bg-white h-max rounded-md p-6">
 
           {/* Div for blogs */}
-          <div className="blogsdiv grid grid-cols-2 justify-around items-center sm:flex sm:flex-col sm:items-center lg:flex lg:flex-col lg:items-center">
+          <div className="blogsdiv grid grid-cols-2 place-items-center sm:flex sm:flex-col sm:items-center lg:flex lg:flex-col lg:items-center">
 
-            <div className="blogone w-[40vw] h-[30rem] border-2 shadow-md p-2 rounded-md my-2 sm:w-[77vw] lg:w-[77vw]">
-              <Image
-                src={BrannerImage}
-                alt='Loading'
-                className="w-[30vw] h-max mx-auto rounded-lg mt-4 sm:w-[70vw] lg:w-[50vw]"
-                priority
-              />
-              <h1 className='my-3 ml-5 text-base'>UploadedOn: 20 Nov 2022 05:00pm </h1>
-              <h1 className='my-3 ml-5 text-xl'>Addedby: Manjunath </h1>
-              <h1 className='my-3 mx-5 text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, cumque nam. Ipsam illo impedit nobis natus cupiditate vero, odit totam ipsa saepe iusto autem quaerat iste expedita earum laborum at!</h1>
-            </div>
-
-            <div className="blogone w-[40vw] h-[30rem] border-2 shadow-md p-2 rounded-md my-2 sm:w-[77vw] lg:w-[77vw]">
-              <Image
-                src={BrannerImage}
-                alt='Loading'
-                className="w-[30vw] h-max mx-auto rounded-lg mt-4 sm:w-[70vw] lg:w-[50vw]"
-                priority
-              />
-              <h1 className='my-3 ml-5 text-base'>UploadedOn: 20 Nov 2022 05:00pm </h1>
-              <h1 className='my-3 ml-5 text-xl'>Addedby: Manjunath </h1>
-              <h1 className='my-3 mx-5 text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, cumque nam. Ipsam illo impedit nobis natus cupiditate vero, odit totam ipsa saepe iusto autem quaerat iste expedita earum laborum at!</h1>
-            </div>
+            {
+              data.map(bikeblogs => {
+                return (
+                  <div key={bikeblogs.id} className="blogone w-[40vw] h-[30rem] border-2 shadow-md p-2 rounded-md my-2 sm:w-[77vw] lg:w-[77vw]">
+                    <img
+                      src={bikeblogs.BlogsImage}
+                      alt='Loading'
+                      className="w-[30vw] h-max mx-auto rounded-lg mt-4 sm:w-[70vw] lg:w-[50vw]"
+                    />
+                    <h1 className='my-3 ml-5 text-base'>UploadedOn: {bikeblogs.BlogsAddedTime} </h1>
+                    <h1 className='my-3 ml-5 text-xl'>Addedby: {bikeblogs.BlogsAddedby} </h1>
+                    <h1 className='my-3 mx-5 text-sm'>{bikeblogs.BlogsText}</h1>
+                  </div>
+                )
+              })
+            }
 
           </div>
         </main>
@@ -57,4 +47,18 @@ export default function BikeBlogs() {
       </div>
     </>
   );
+}
+
+// getServerSideProps is a function for fetching data..
+// I'm going to use getServerSideProps. You have the option of using getServerSideProps or getStaticProps. In this application, we are using getServerSideProps.
+
+export async function getStaticProps() {
+  // Importing bikesblogs data from json file
+  const { bikeblogs } = await import('/Database/bikeblogs.json');
+  // console.log(bikeblogs)
+  return {
+    props: {
+      data: bikeblogs,
+    },
+  }
 }
