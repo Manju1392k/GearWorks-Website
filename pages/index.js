@@ -1,31 +1,42 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head'
-import Image from 'next/image'
-import { useEffect } from 'react'
+import Head from "next/head";
+import Image from "next/image";
+import { useEffect } from "react";
 
 // Image importing
-import BrannerImage from '../public/BrannerImage.png'
+import BrannerImage from "../public/BrannerImage.png";
 
 export default function Home() {
+  // Function for changing text
+  useEffect(() => {
+    try {
+      if (process.browser) {
+        setInterval(() => {
+          let H1Tag = document.getElementsByClassName("h1tag")[0];
+          H1Tag.innerHTML = "Motor cycle it is not a bike.";
+          H1Tag.style.color = 'black';
+        }, 4000);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  });
 
   // Function for changing text
   useEffect(() => {
-    setInterval(function () {
-      let H1Tag = document.getElementsByClassName('h1tag')[0]
-      H1Tag.style.color = 'black'
-      H1Tag.innerHTML = 'Motor cycle it is not a bike.'
-    }, 4000);
-  })
-
-  // Function for changing text
-  useEffect(function () {
-    setInterval(() => {
-      let H1Tag = document.getElementsByClassName('h1tag')[0]
-      H1Tag.style.color = 'green'
-      H1Tag.innerHTML = 'Its a emotion.'
-    }, 8000);
-  })
+    try {
+      if (process.browser) {
+        setInterval(() => {
+          let H1Tag = document.getElementsByClassName("h1tag")[0];
+          H1Tag.innerHTML = "Its a emotion.";
+          H1Tag.style.color = 'green';
+        }, 8000);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  });
 
   return (
     <>
@@ -38,28 +49,62 @@ export default function Home() {
 
       {/* Div for margin:0 and padding:0 for all elements */}
       <div className="m-0 p-0  ">
-
         {/* Main tag for main content */}
         <main className="blackbox w-[90vw] mx-auto bg-white h-max rounded-md p-6">
-
           {/* Branner image tag */}
-          <Image src={BrannerImage} className='mx-auto w-[80vw] h-max rounded-md' />
+          <Image
+            src={BrannerImage}
+            className="mx-auto w-[80vw] h-max rounded-md"
+            alt={'loading'}
+            priority
+          />
 
           {/* Text changing div */}
-          <div className="textbox my-8 h-[5rem]">
-            <h2 className='h1tag text-center font-bold text-5xl transition-all duration-700 font-[cursive]'></h2>
+          <div className="textbox my-8 h-[5rem] sm:h-[3rem] lg:h-[3rem]">
+            <h2 className="h1tag text-center font-bold text-5xl transition-all duration-700 font-[cursive] sm:text-2xl lg:text-2xl"></h2>
           </div>
 
           <hr />
 
           <div className="scalesbox">
-            <h1 className=' text-3xl font-bold text-center'>GearWorks is NO .1 company in selling bike market. See our latest sales recorde.</h1>
+            <h1 className=" text-3xl font-bold text-center my-8 sm:text-xl lg:text-xl">
+              GearWorks is NO .1 company in bike selling market. See our latest
+              sales recorde.
+            </h1>
+
+            {/* Scalesdatabox div */}
+            <div className="scaledatabox w-[70vw] mx-auto h-max border-2 flex justify-around items-end rounded-md sm:w-[72vw] lg:w-[75vw] sm:p-2 lg:p-2">
+              {/* 2019 databox div */}
+              <div className="2019databox flex flex-col items-center">
+                <h5 className="text-lg mt-5 mb-2 sm:text-xs sm:text-center">30,321 Bikes Sold</h5>
+                <div className="bluebox w-[5rem] h-[10rem] bg-blue-600 rounded-sm sm:w-[1rem] lg:w-[3rem]"></div>
+                <h5 className="text-lg mb-5 mt-2 font-semibold sm:text-xs">2019</h5>
+              </div>
+
+              {/* 2020 databox div */}
+              <div className="2020databox flex flex-col items-center">
+                <h5 className="text-lg mt-5 mb-2 sm:text-xs sm:text-center">15,423 Bikes Sold</h5>
+                <div className="redbox w-[5rem] h-[5rem] bg-red-600 rounded-sm sm:w-[1rem] lg:w-[3rem]"></div>
+                <h5 className="text-lg mb-5 mt-2 font-semibold sm:text-xs">2020</h5>
+              </div>
+
+              {/* 2021 databox div */}
+              <div className="2021databox flex flex-col items-center">
+                <h5 className="text-lg mt-5 mb-2 sm:text-xs sm:text-center">43,789 Bikes Sold</h5>
+                <div className="violetbox w-[5rem] h-[14rem] bg-violet-600 rounded-sm sm:w-[1rem] lg:w-[3rem]"></div>
+                <h5 className="text-lg mb-5 mt-2 font-semibold sm:text-xs">2021</h5>
+              </div>
+
+              {/* 2021 databox div */}
+              <div className="2022databox flex flex-col items-center">
+                <h5 className="text-lg mt-5 mb-2 sm:text-xs sm:text-center">89,654 Bikes Sold</h5>
+                <div className="greenbox w-[5rem] h-[20rem] bg-green-600 rounded-sm sm:w-[1rem] lg:w-[3rem]"></div>
+                <h5 className="text-lg mb-5 mt-2 font-semibold sm:text-xs">2022</h5>
+              </div>
+            </div>
           </div>
-
         </main>
-
       </div>
-
     </>
-  )
+  );
 }
