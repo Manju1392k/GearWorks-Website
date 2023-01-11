@@ -6,13 +6,13 @@
 
 # 🌐 Preview of the Website
 
-
+https://user-images.githubusercontent.com/66934377/211707581-058ea3d3-7fbe-464c-9488-beb28b3674bf.mp4
 
 ---
 
 # 📱Preview of the Responsive Design
 
-
+https://user-images.githubusercontent.com/66934377/211707707-1dcfefac-a225-416e-8f27-0809d71ccc5c.mp4
 
 ---
 
