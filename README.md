@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ℹ️ GearWorks Website
 
-## Getting Started
+* GearWorks is a website. GearWork is a company that sells sports bikes. This website is used for bike showrooms.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
+# 🌐 Preview of the Website
+
+
+
+---
+
+# 📱Preview of the Responsive Design
+
+
+
+---
+
+# 🗂️ Framework & Languages
+
+* This project makes use of the Framework and Language listed below.to run this project. This framework and language have been installed in
+system with the same version or the latest version
+
+| Framework  | Version |
+| ------------- | ------------- |
+| **Nodejs**  | 18.12.1  |
+| **Tailwindcss** | 3.2.4 |
+| **Nextjs** | 13 |
+
+---
+
+# 👨‍💻 Project Execution Command 
+
+```bash 
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# 📦 Dependencies for project execution. To install, run the commands listed below. 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+* Without these dependencies, the project will not execute.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+# ⬇️ Code Downloading Process
 
-To learn more about Next.js, take a look at the following resources:
+* There are 2 ways to get the code.
+* Choose whichever method best suits your needs. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Ⓜ️ Method 1
 
-## Deploy on Vercel
+* **This method is very easy.**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Now select the **code option.** 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Screenshot (158)](https://user-images.githubusercontent.com/66934377/164152919-f2854829-535d-4227-9c2f-031f8051f6ac.png)
+
+* Now a screen will pop up. Now select the **Download Zip** option. Now the file has started downloading.
+
+![Screenshot (159)](https://user-images.githubusercontent.com/66934377/164153128-b64e85a2-e40c-4457-9835-a749ac79acd6.png)
+
+---
+
+# Ⓜ️ Method 2
+
+* **This method is a little difficult.**
+
+* Now In **Windows, open cmd, in Mac, bash Terminal**. Now Hit the below commands.
+
+```bash
+git clone https://github.com/Manju1392k/GearWorks-Website.git
+```
+
+* The project was cloned after this process.
