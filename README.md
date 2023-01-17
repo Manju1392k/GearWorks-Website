@@ -32,7 +32,7 @@ system with the same version or the latest version
 # 👨‍💻 Project Execution Command 
 
 ```bash 
-npm start
+npm run dev
 ```
 
 ---
